@@ -1,5 +1,6 @@
 export interface InputParams {
   packageVersionIds?: string[]
+  packageVersion?: string
   owner?: string
   repo?: string
   packageName?: string
@@ -9,6 +10,7 @@ export interface InputParams {
 
 const defaultParams = {
   packageVersionIds: [],
+  packageVersion: '',
   owner: '',
   repo: '',
   packageName: '',
@@ -18,6 +20,7 @@ const defaultParams = {
 
 export class Input {
   packageVersionIds: string[]
+  packageVersion: string
   owner: string
   repo: string
   packageName: string
@@ -28,6 +31,7 @@ export class Input {
     const validatedParams: Required<InputParams> = {...defaultParams, ...params}
 
     this.packageVersionIds = validatedParams.packageVersionIds
+    this.packageVersion = validatedParams.packageVersion
     this.owner = validatedParams.owner
     this.repo = validatedParams.repo
     this.packageName = validatedParams.packageName

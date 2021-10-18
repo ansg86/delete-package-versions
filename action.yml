@@ -9,6 +9,10 @@ inputs:
     description: Comma separated string of package version ids to delete.
     required: false
 
+  package-version:
+    description: String of package version to delete.
+    required: false
+
   owner:
     description: >
       Owner of the repo containing the package version to delete.
